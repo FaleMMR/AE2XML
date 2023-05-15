@@ -1,76 +1,89 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <biblioteca xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:noNamespaceSchemaLocation= "RCM_Actividad_2.xsd">
+        xsi:noNamespaceSchemaLocation= "RCM_AC2.xsd">
 
-        <libro Id="L1234" tipo_clase="novela" numero_pag="652">
-            <titulo>sss</titulo>
+        <libro Id="L5557" tipo_clase="novela" numero_pag="254">
+
+            <titulo>Harry Potter y la piedra filosofal</titulo>
+
             <capitulos>
 
-                <capitulo numero_pag="23">
-                    <titulo_capitulo> sssss</titulo_capitulo>
-                    <contenido_cap enlace_info="url"/>  
+                <capitulo numero_pag="7">
+                    <titulo_capitulo>El niño que vivió </titulo_capitulo>
+                    <contenido_cap enlace_info="URL"/>  
                 </capitulo>  
 
-                <capitulo numero_pag="12">
-                    <titulo_capitulo>xxxx </titulo_capitulo>
-                    <contenido_cap enlace_info="url"/>  
+                <capitulo numero_pag="6">
+                    <titulo_capitulo> El vidrio que se desvaneció</titulo_capitulo>
+                    <contenido_cap enlace_info="URL"/>  
                 </capitulo>   
 
             </capitulos>  
-            <indice_l>xx</indice_l>
-            <sinopsis>xx</sinopsis>
+
+            <indice_l>xxxx</indice_l>
+
+            <sinopsis>xxxx</sinopsis>
+
         </libro>
     
 
     
-        <revista Id="R1234" tipo_clase="coches" numero_pag="234">
-            <titulo_rev>xx</titulo_rev>
-            <numero_rev>xx</numero_rev>
-            <indice_r>xx</indice_r>
+        <revista Id="R2541" tipo_clase="coches" numero_pag="65">
+
+            <titulo_rev>Automovil</titulo_rev>
+
+            <numero_rev>325</numero_rev>
+
+            <indice_r>xxxx</indice_r>
+
             <secciones_r>
 
-                <seccion_r numero_pag="36">
+                <seccion_r numero_pag="8">
                     <contenido_sec enlace_info="URL"/>
                 </seccion_r>
 
-                 <seccion_r numero_pag="36">
+                 <seccion_r numero_pag="5">
                     <contenido_sec enlace_info="URL"/>
                 </seccion_r>
 
             </secciones_r> 
+
         </revista>
     
 
     
-        <periodico Id="P1234" tipo_clase="nacional" fecha_publicacion="2023-03-12">
+        <periodico Id="P9845" tipo_clase="nacional" fecha_publicacion="2023-03-12">
+
             <secciones_p>
 
                 <seccion_p tipo_seccion="deportes">
 
-                    <articulo autor="xx">
-                         <contenido_a enlace_info="url"/>
+                    <articulo autor="Manolo Lemas">
+                         <contenido_a enlace_info="URL"/>
                     </articulo>    
 
-                    <articulo autor="xx">
-                         <contenido_a enlace_info="url"/>
+                    <articulo autor="Antonio Ramirez">
+                         <contenido_a enlace_info="URL"/>
                     </articulo>   
 
                 </seccion_p>   
 
                  <seccion_p tipo_seccion="opinion">
 
-                    <articulo autor="xx">
-                         <contenido_a enlace_info="url"/>
+                    <articulo autor="Maria Torres">
+                         <contenido_a enlace_info="URL"/>
                     </articulo>    
 
-                    <articulo autor="xx">
-                         <contenido_a enlace_info="url"/>
+                    <articulo autor="Pedro Leal">
+                         <contenido_a enlace_info="URL"/>
                     </articulo>  
                       
                 </seccion_p>  
 
             </secciones_p>
-            <indice_p>xx</indice_p>
+
+            <indice_p>xxxx</indice_p>
+            
         </periodico>
     
 
