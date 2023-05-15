@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<xs:schema xmlns:xs="http://www.w3.org/2001/XMLSchema"
+           targetNamespace="http://www.practicaAE.org/validadorxsd" 
+           elementFormDefault="qualified" 
+           attributeFormDefault="qualified" >
+
+   <!-- ............. PRIMER NIVEL ..................... -->  
+
+<xs:element name="biblioteca" type="tipobiblioteca" />
+<xs:complexType name="tipobiblioteca">
+    <xs:sequence>
+      <xs:element name="libros"     type="tipolibros"/>
+      <xs:element name="revistas"   type="tiporevistas"/>
+      <xs:element name="periodicos" type="tipoperiodicos"/>
+    </xs:sequence>
+</xs:complexType>
+
+   <!-- ............. LIBROS ..................... -->  
+   
+<xs:complexType name="tipolibros">
+    <xs:sequence>
+      <xs:element name="libro"     type="tipolibro"/>
+    </xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="tipolibro">
+    <xs:sequence>
+      <xs:element name="titulo"     type="xs:string"/>
+      <xs:element name="capitulos"  type="tipocapitulos"/>
+      <xs:element name="indice"     type="xs:string"/>
+      <xs:element name="sinopsis"   type="xs:string"/>
+
+    </xs:sequence>     
+     <xs:attribute name="numpaginas" type="xs:string" use="required"/>
+      <xs:attribute name="tipo_clase" type="restricciontipoclaselibro" use="required"/>
+      <xs:attribute name="id"         type="restriccionidlibro" use="required"/>
+</xs:complexType>
+
+<xs:complexType name="tipocapitulos">
+    <xs:sequence>
+      <xs:element name="capitulo"     type="tipocapitulo" maxOccurs="unbounded"   />
+    </xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="tipocapitulo">
+    <xs:sequence>
+      <xs:element name="titulo"     type="xs:string"/>
+      <xs:element name="contenido"  type="xs:string"/>
+    
+    </xs:sequence> 
+     <xs:attribute name="numpaginas" type="xs:string" use="required"/> 
+</xs:complexType>
+
+
+<xs:simpleType name="restricciontipoclaselibro">
+    <xs:restriction base="xs:string">
+        <xs:enumeration value="novela"/>
+        <xs:enumeration value="infantil"/>
+        <xs:enumeration value="didactico"/>
+    </xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="restriccionidlibro">
+    <xs:restriction base="xs:string">
+        <xs:pattern value="L[0-9]{4}"/>
+    </xs:restriction>
+</xs:simpleType>
+
+
+
+   <!-- ............. REVISTAS ..................... -->  
+
+<xs:complexType name="tiporevistas">
+    <xs:sequence>
+      <xs:element name="revista"     type="tiporevista"/>
+    </xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="tiporevista">
+    <xs:sequence>
+      <xs:element name="titulo"     type="xs:string"/>
+      <xs:element name="numerorevista"  type="xs:string"/>
+      <xs:element name="indice"     type="xs:string"/>
+      <xs:element name="secciones"   type="tiposeccionesrevistas"/>
+
+    </xs:sequence>   
+       <xs:attribute name="numpaginas" type="xs:string" use="require"/>
+      <xs:attribute name="tipo_clase" type="restricciontipoclaserevista" use="required"/>
+      <xs:attribute name="id"         type="restriccionidrevista" use="required"/>
+</xs:complexType>
+
+<xs:complexType name="tiposeccionesrevistas">
+    <xs:sequence>
+      <xs:element name="seccion"     type="tiposeccionrevista" maxOccurs="unbounded"  />
+    </xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="tiposeccionrevista">
+    <xs:sequence>
+      <xs:element name="contenido"     type="tipocontenido"/>
+     
+    </xs:sequence> 
+    <xs:attribute name="numpaginas" type="xs:string" use="required"/> 
+</xs:complexType>
+
+<xs:complexType name="tipocontenido">
+    <xs:attribute name="enlace" type="xs:string" use="required"/> 
+</xs:complexType>
+
+
+<xs:simpleType name="restricciontipoclaserevista">
+    <xs:restriction base="xs:string">
+        <xs:enumeration value="informatica"/>
+        <xs:enumeration value="corazon"/>
+        <xs:enumeration value="coches"/>
+        <xs:enumeration value="investigacion"/>
+    </xs:restriction>
+</xs:simpleType>
+
+<xs:simpleType name="restriccionidrevista">
+    <xs:restriction base="xs:string">
+        <xs:pattern value="R.*"/>
+    </xs:restriction>
+</xs:simpleType>
+
+
+   <!-- ............. PERIODICOS ..................... -->  
+
+<xs:complexType name="tipoperiodicos">
+    <xs:sequence>
+      <xs:element name="periodico"     type="tipoperiodico"/>
+    </xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="tipoperiodico">
+    <xs:sequence>
+      <xs:element name="indice"     type="xs:string"/>
+      <xs:element name="secciones"   type="tiposeccionesperidico"/>
+     
+    </xs:sequence> 
+    <xs:attribute name="fechapublicacion" type="xs:string" use="require"/>
+      <xs:attribute name="tipo_clase" type="restricciontipoclaseperiodico" use="required"/>
+      <xs:attribute name="id"         type="restriccionidperiodico" use="required"/>
+</xs:complexType>
+
+<xs:complexType name="tiposeccionesperidico">
+    <xs:sequence>
+      <xs:element name="seccion"     type="tiposeccionperiodico" maxOccurs="unbounded"   />
+       
+    </xs:sequence> 
+    <xs:attribute name="tipo_seccion"         type="restricciontiposeccionperiodico" use="required"/>
+</xs:complexType>
+
+<xs:complexType name="tiposeccionperiodico">
+    <xs:sequence>
+      <xs:element name="articulos"     type="tipoarticulos"  maxOccurs="unbounded" />
+    </xs:sequence>
+</xs:complexType>
+
+<xs:complexType name="tipoarticulos">
+    <xs:attribute name="articulo" type="tipooarticulo" use="required"/> 
+</xs:complexType>
+
+
+<xs:complexType name="tipooarticulo">
+    <xs:attribute name="contenido" type="tipocontenidoarticulo" use="required"/> 
+</xs:complexType>
+
+
+<xs:complexType name="tipocontenidoarticulo">
+    <xs:attribute name="enlace" type="xs:string" use="required"/> 
+</xs:complexType>
+
+
+<xs:simpleType name="restricciontipoclaseperiodico">
+    <xs:restriction base="xs:string">
+        <xs:enumeration value="nacionales"/>
+        <xs:enumeration value="internacionales"/>
+    </xs:restriction>
+</xs:simpleType>
+
+
+<xs:simpleType name="restricciontiposeccionperiodico">
+    <xs:restriction base="xs:string">
+        <xs:enumeration value="economica"/>
+        <xs:enumeration value="opinion"/>
+        <xs:enumeration value="deportes"/>
+        <xs:enumeration value="nacional"/>
+        <xs:enumeration value="internacional"/>
+      
+    </xs:restriction>
+</xs:simpleType>
+
+
+<xs:simpleType name="restriccionidperiodico">
+    <xs:restriction base="xs:string">
+        <xs:pattern value="P[0-9]{4}"/>
+    </xs:restriction>
+</xs:simpleType>
+
+
+
+
+
+</xs:schema>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</Schema>

@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE biblioteca SYSTEM "validador.dtd">
+
+
+<biblioteca>
+
+	<libros>
+
+		<libro numpaginas="11" tipo_clase="novela" id="L8765">
+			<titulo>XXXX</titulo>
+
+
+			<capitulos>
+			
+				<capitulo numpaginas="11">
+					<titulo>asdfas</titulo>
+					<contenido>asdfasdf</contenido>
+				</capitulo>
+				
+				<capitulo numpaginas="11">
+					<titulo>asdfas</titulo>
+					<contenido>asdfasdf</contenido>
+				</capitulo>
+				
+			</capitulos>
+
+			<indice>XXXX</indice>
+			<sinopsis>XXXX</sinopsis>
+
+		</libro>
+
+	</libros>
+
+
+	<revistas>
+		<revista  numpaginas="11" tipo_clase="coches" id="R76q34">
+			<titulo>asdasdf</titulo>
+			<numerorevista>asdfasdf</numerorevista>
+			<indice>asdfasdf</indice>
+			<secciones>
+				<seccion  numpaginas="11">
+					<contenido enlace="asfdasdfasfda"></contenido>
+				</seccion>
+			
+			
+			</secciones>
+		
+		</revista>
+
+	</revistas>
+
+	<periodicos>
+		<periodico fechapublicacion="11/12/2022" tipo_clase="nacionales" id="P7656" >
+			<secciones>
+				<seccion  tipo_seccion="deportes">
+					<articulos>
+						<articulo autor='PEPE'>
+							<contenido enlace="asfdasdfasfda"></contenido>
+						</articulo>
+					
+					</articulos>
+		
+				</seccion>
+			</secciones>
+			<indice>dfbdfbb</indice>
+			
+		
+		
+		</periodico>
+
+	</periodicos>
+
+
+</biblioteca>
