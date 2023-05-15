@@ -1,0 +1,67 @@
+
+
+
+<!ELEMENT biblioteca (libro, revista, periodico)>
+
+<!-- LIBRO-->
+
+<!ELEMENT libro (titulo, capitulos, indice_l, sinopsis)>
+
+<!ATTLIST libro 
+    Id ID #REQUIRED
+    tipo_clase (novela|infantil|didactico) #REQUIRED
+    numero_pag CDATA #REQUIRED
+>  
+<!ELEMENT titulo (#PCDATA)>
+<!ELEMENT capitulos (capitulo+)>
+
+<!ELEMENT capitulo (titulo_capitulo, contenido_cap)>
+<!ATTLIST capitulo numero_pag CDATA #REQUIRED>
+
+<!ELEMENT titulo_capitulo (#PCDATA)>
+<!ELEMENT contenido_cap EMPTY>
+<!ATTLIST contenido_cap enlace_info CDATA #REQUIRED>
+
+<!ELEMENT indice_l (#PCDATA)>
+<!ELEMENT sinopsis (#PCDATA)>
+
+<!-- REVISTA-->
+
+<!ELEMENT revista (titulo_rev, numero_rev, indice_r, secciones_r)>
+<!ATTLIST revista
+    Id ID #REQUIRED
+    tipo_clase (informatica|corazon|coches|investigacion|otras) #REQUIRED
+    numero_pag CDATA #REQUIRED
+>    
+
+<!ELEMENT titulo_rev (#PCDATA)>
+<!ELEMENT numero_rev (#PCDATA)>
+<!ELEMENT indice_r (#PCDATA)>
+<!ELEMENT secciones_r (seccion_r+)>
+
+<!ELEMENT seccion_r (contenido_sec)>
+<!ATTLIST seccion_r numero_pag CDATA #REQUIRED>
+
+<!ELEMENT contenido_sec EMPTY>
+<!ATTLIST contenido_sec enlace_info CDATA #REQUIRED>
+
+<!-- PERIODICO-->
+
+<!ELEMENT periodico (secciones_p, indice_p)>
+<!ATTLIST periodico
+    Id ID #REQUIRED
+    tipo_clase (nacional|internacional) #REQUIRED
+    fecha_publicacion CDATA #REQUIRED
+>
+
+<!ELEMENT secciones_p (seccion_p+)>
+<!ELEMENT seccion_p (articulo+)>
+<!ATTLIST seccion_p tipo_seccion (economica|opinion|deportes|nacional|internacional) #REQUIRED>
+
+<!ELEMENT articulo (contenido_a)>
+<!ATTLIST articulo autor CDATA #REQUIRED>
+
+<!ELEMENT contenido_a EMPTY>
+<!ATTLIST contenido_a enlace_info CDATA #REQUIRED>
+
+<!ELEMENT indice_p (#PCDATA)>

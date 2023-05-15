@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE biblioteca SYSTEM "RCM_Actividad_2.dtd" >
+
+<biblioteca>
+    
+        <libro Id="Lxxxx" tipo_clase="novela" numero_pag="">
+            <titulo></titulo>
+            <capitulos>
+
+                <capitulo numero_pag="">
+                    <titulo_capitulo> </titulo_capitulo>
+                    <contenido_cap enlace_info="url"/>  
+                </capitulo>  
+
+                <capitulo numero_pag="">
+                    <titulo_capitulo> </titulo_capitulo>
+                    <contenido_cap enlace_info="url"/>  
+                </capitulo>   
+
+            </capitulos>  
+            <indice_l></indice_l>
+            <sinopsis></sinopsis>
+        </libro>
+    
+
+    
+        <revista Id="Pxxxx" tipo_clase="coches" numero_pag="">
+            <titulo_rev></titulo_rev>
+            <numero_rev></numero_rev>
+            <indice_r></indice_r>
+            <secciones_r>
+
+                <seccion_r numero_pag="">
+                    <contenido_sec enlace_info="URL"/>
+                </seccion_r>
+
+                 <seccion_r numero_pag="">
+                    <contenido_sec enlace_info="URL"/>
+                </seccion_r>
+
+            </secciones_r> 
+        </revista>
+    
+
+    
+        <periodico Id="Rxxxx" tipo_clase="nacional" fecha_publicacion="2023-03-12">
+            <secciones_p>
+
+                <seccion_p tipo_seccion="deportes">
+
+                    <articulo autor="">
+                         <contenido_a enlace_info="url"/>
+                    </articulo>    
+
+                    <articulo autor="">
+                         <contenido_a enlace_info="url"/>
+                    </articulo>   
+
+                </seccion_p>   
+
+                 <seccion_p tipo_seccion="opinion">
+
+                    <articulo autor="">
+                         <contenido_a enlace_info="url"/>
+                    </articulo>    
+
+                    <articulo autor="">
+                         <contenido_a enlace_info="url"/>
+                    </articulo>  
+                      
+                </seccion_p>  
+
+            </secciones_p>
+            <indice_p></indice_p>
+        </periodico>
+    
+
+</biblioteca>
