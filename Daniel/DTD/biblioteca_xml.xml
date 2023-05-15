@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE biblioteca SYSTEM "biblioteca_dtd.dtd"> 
+	
+<biblioteca>
+    <libros>
+        <libro id="L0001" tipo_clase="didactico" number_pages="100">
+            <titulo>Loco</titulo>
+            <indice>
+                <il/>
+                <il/>
+                <il/>
+            </indice>
+            <sinopsis>. Este escrito llama a una revolución mundial contra las consecuencias de la sociedad moderna, denominada en el manifiesto "sistema tecno-industrial".Argumenta que la "Revolución Industrial y sus consecuencias han supuesto un desastre para la humanidad"</sinopsis>
+            <capitulos>
+                <capitulo number_pages="20">
+                    <titulo>Introduccion</titulo>
+                    <contenido enlace="www.enlace.com"/>
+                </capitulo>
+                <capitulo number_pages="20">
+                    <titulo>Introduccion</titulo>
+                    <contenido enlace="www.enlace.com"/>
+                </capitulo>
+            </capitulos>
+        </libro>        
+    </libros>
+
+    <revistas>
+        <revista id="R1" tipo_clase="informatica" number_pages="30">
+            <titulo>a</titulo>
+            <numero>5</numero>
+            <indice>
+                <ir />
+                <ir />
+                <ir />
+            </indice>
+            <secciones>
+                <seccion number_pages="10"	>
+                    <contenido enlace="www.revista.com/informatica/20"/>
+                </seccion>
+            </secciones>
+        </revista>
+    </revistas>
+
+    <periodicos>
+        <periodico id="P0001"  tipo_clase="nacional" fecha_publicacion="10/10/2005">
+            <indice_p>
+                <ip/>
+                <ip/>
+                <ip/>
+            </indice_p>
+            <secciones>
+                <seccion_p tipo_seccion="economica" >
+                    <articulo autor="Jack">
+                        <contenido enlace="www.peridico.com/economia/Jack"/>
+                    </articulo>
+                    <articulo autor="Rose">
+                        <contenido enlace="www.peridico.com/economia/Rose"/>
+                    </articulo>
+                </seccion_p>
+            </secciones>
+        </periodico>
+    </periodicos>
+</biblioteca>
