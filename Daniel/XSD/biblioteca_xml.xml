@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<biblioteca xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="biblioteca_xsd.xsd">
+    <libros>
+        <libro id="L0001" tipo_clase="didactico" number_pages="230">
+            <titulo>El Internado</titulo>
+            <indice>
+                <il>indice1</il>
+                <il>indice2</il>
+            </indice>
+            <sinopsis>Se aventuran los alumnos del internado hacia la aventura</sinopsis>
+            <capitulos>
+                <capitulo number_pages="100">
+                    <titulo>Capitulo 1</titulo>
+                    <contenido enlace="www.libro.com/capitulo1"></contenido>
+                </capitulo>
+                <capitulo number_pages="230">
+                    <titulo>Capitulo 2</titulo>
+                    <contenido enlace="www.libro.com/capitulo1"></contenido>
+                </capitulo>
+            </capitulos>
+        </libro>           
+    </libros>
+    <revistas>
+        <revista id="R0001" number_pages="10" tipo_clase="investigacion">
+            <titulo></titulo>
+            <numero></numero>
+            <indice>
+                <ir></ir>
+                <ir></ir>
+            </indice>
+            <secciones>
+                <seccion number_pages="20">
+                    <contenido enlace="www.revista.com/informacion/blabla"></contenido>
+                </seccion>
+            </secciones>
+        </revista>
+    </revistas>
+    <periodicos>
+        <periodico id="Rloquesea1" tipo_clase="nacional" fecha_publicacion="2001-09-13">
+            <indice>
+                <ip></ip>
+                <ip></ip>
+            </indice>
+            <secciones>
+                <seccion tipo_seccion="economica">
+                    <articulo autor="Jack">
+                        <contenido enlace="www.economia.com/enlace/1"></contenido>
+                    </articulo>
+                </seccion>
+            </secciones>
+        </periodico>
+    </periodicos>
+</biblioteca>
